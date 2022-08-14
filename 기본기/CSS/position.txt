@@ -1,0 +1,52 @@
+position 속성은 HTML 문서 상에서 요소가 배치되는 방식을 결정한다.
+
+
+1. position: static
+
+position 속성을 별도로 지정해주지 않으면 기본값인 static가 적용된다.
+
+static는 HTML에 작성된 순서 그대로 브라우저 화면에 표시되며
+top, left, bottom, right 같은 배치 속성값은 무시된다.
+
+
+2. position: relative
+
+position 속성을 relative로 설정하면 요소를 원래 위치를 기준으로 상대적(relative)으로 배치해준다.
+
+기존 static의 위치에서 상대적으로 이동한다.
+
+
+3. position: absolute
+
+absolute 속성은 요소를 상위 요소 기준으로 배치한다. (담겨있는 상자 기준)
+예를 들어 상위요소 <body>가 있다면 <body> 전체를 기준으로 배치한다.
+ex)
+position: absolute;
+bottom: 10px;
+right: 16px;
+라는 값이 주어졌다면
+<body> 전체에서 아래에서 10px, 오른쪽에서 16px 떨어진 위치에 배치된다.
+
+
+4. position: fixed
+
+fixed 속성은 화면에 보이는 고정된 위치에 배치하는 것으로
+화면을 위아래로 스크롤하더라도 특정 부분에 고정되어 움직이지 않는다.
+
+속성 값의 배치 기준이 viewport 즉, 브라우저 전체화면이다.
+top, left, bottom, right 속성은 각각 브라우저로부터 해당 요소가 얼마나 떨어져있는지를 결정한다.
+
+
+5. position: sticky
+
+sticky 속성은 원래 있어야하는 자리에 존재하면서 스크롤하더라도 사라지지 않고
+화면 상단에 끈적하게(sticky) 붙어서 움직이지 않는것이다.
+
+※ 스크롤하는 방향의 속성이 존재해야 (위 아래 스크롤 시 top 혹은 bottom) 스크롤 했을 때
+※ 정상적으로 달라붙을 수 있다. 속성 값이 없다면 적용되지 않음
+
+
+
+
+
+
