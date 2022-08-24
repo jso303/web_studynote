@@ -1,0 +1,60 @@
+Grid는 Flex와 마찬가지로 하나의 grid container(박스)에 여러 개의 grid item(아이템)으로
+구성되어 있다.
+다른 점은 Flex는 한 방향 레이아웃 시스템이고 (1차원)
+Grid는 두 방향(가로-세로) 레이아웃 시스템이다(2차원)
+
+display: grid;로 사용
+
+
+1. grid-template (그리드 트랙 크기 지정)
+
+1) grid-template-row (그리드 행(가로) 배치)
+2) grid-template-column (그리드 열(세로) 배치)
+
+
+※ value : fr : 비율 대로 트랙의 크기를 나눔
+ex) 1fr 2fr 2fr == 1:2:2 비율로 나눈다
+ex2) 100px 2fr 1fr == 100px를 사용하고 남은 공간을 2:1 비율로 나눈다
+
+
+※ 배치 속성 내 값
+3) repeat (반복 함수)
+
+repeat(반복횟수, 반복값)
+ex) repeat(5, 1fr) == 1fr 1fr 1fr 1fr 1fr
+
+
+4) minmax (최솟값 최댓값 지정 함수)
+
+minmax(최솟값, 최댓값)
+ex) minmax(100px, auto) == 최소 100px, 최대는 자동으로 늘어나게
+
+
+5) auto-fill, auto-fit (갯수를 지정하지 않고 너비가 허용하는 한 셀 채우기)
+
+auto-fill : 너비가 허용하는 한 최대갯수를 채우고 만약 셀의 갯수가 모자르면 공간을 비움
+auto-fit : 너비가 허용하는 한 최대갯수를 채우고 만약 셀의 갯수가 모자르면 남는 공간을 해당 줄 셀들을 늘려 채운다
+
+
+
+2. gap
+
+1) row-gap (그리드 셀 행(가로)끼리의 간격)
+2) column-gap (그리드 셀 열(세로)끼리의 간격)
+
+
+3. grid-auto (grid-template와 동일하지만 갯수를 모를 때 자동으로 적용시키기 위해 사용)
+
+1) grid-auto-columns
+2) grid-auto-rows
+
+
+
+4. grid-template-areas (영역 이름으로 그리드 정의)
+
+직관적이나 잘 쓰이지는 않음
+
+
+
+※ align-items(세로(column)축) 나 justify-items(가로(row)축) 등은 flexbox와 동일하다.
+
