@@ -1,0 +1,71 @@
+1. toString() : 진수변환
+
+EX)	let num = 10;
+	
+	num.toString();		// "10"
+	num.toString(2);		// "1010"
+	
+	let num2 = 255;
+	num2.toString(16);	// "ff"
+
+
+2. Math (수학 메소드 객체)
+
+- Math.ceil() : 올림
+- Math.floor() : 내림
+- Math.round() : 반올림
+- Math.random() : 0~1 사이 무작위 숫자 생성
+EX) 1~100 사이 숫자를 뽑고 싶다면? // Math.floor(Math.random()*100)+1
+- Math.max() : 괄호 안 인수 중 최댓값
+- Math.min() : 괄호 안 인수 중 최솟값
+- Math.abs() : 절대값
+- Math.pow(n,m) : 제곱	// n의 m 제곱 == n**m
+- Math.sqrt() : 제곱근		// EX) Math.sqrt(16)	// 4
+
+
+3. toFixed() : 소수점 자릿수 처리
+- 수학 계산 시 소수점 자리수를 제한해야할 때 사용
+- 단, 문자열로 반환하므로 다시 숫자 처리가 필요하다면 Number()로 감싸주는것이 좋다.
+
+EX)	let userRate = 30.1234;
+	userRate.toFixed(2);	// "30.12"
+	userRate.toFixed(0);	// "30"
+	userRate.toFixed(6);	// "30.123400"
+	
+	Number(userRate.toFixed(2));	// 30.12
+
+
+4. isNaN() : NaN인지 검사
+
+EX)	let x = Number('x');	// NaN
+
+	x == NaN			// false
+	x === NaN		// false
+	NaN == NaN		// false
+
+	isNaN(x)			// true	// NaN인지 검사할 수 있는 유일한 방법
+	isNaN(3)			// false
+
+
+5. parseInt() : 문자열을 숫자로 변환
+- Number과 다르게 문자와 혼합되어 있더라도 숫자인 부분까지 변환해서 반환해준다.
+- 두번째 인수로 진수를 받아서 처리도 가능함
+- 소수점은 무시하고 정수만 반환
+
+EX)	let margin = '10px';
+	
+	parseInt(margin);		// 10
+	Number(margin);		// NaN
+
+	let redColor = 'f3';
+	parseInt(redColor);		// NaN	// 시작이 문자이므로 변환한게 없음
+	parseInt(redColor, 16);		// 243	// 16진수로 받아들이고 10진수로 처리
+	
+	parseInt('11', 2)			// 3		// 2진수 11은 10진수로 3이 된다.
+
+
+6. parseFloat() : 문자열을 숫자로 변환
+- parseInt() 와 동일하지만 부동소수점을 반환한다.
+
+
+

@@ -1,0 +1,66 @@
+1. 문자열 메소드
+
+※ 문자열에서 배열에 접근 시 수정은 불가능
+EX)	let desc = '안녕하세요.';
+	
+	desc[2] 			// '하'
+	desc[4] = '용';
+	console.log(desc);	// 안녕하세요.
+
+1) toUpperCase() / toLowerCase()
+- 영문일 경우 대문자/소문자로 변환해줌
+
+2) srt.indexOf(text)
+EX)	let desc = "Hi guys. Nice to meet you.";
+	desc.indexOf('to');	// 14		// 공백 포함, 첫번째 위치만 반환
+					// 존재하지 않는다면 -1 반환
+
+3) srt.slice(n, m)
+- 문자열 일부 잘라서 반환 
+- m이 없다면 문자열 끝까지
+- m이 양수면 그 숫자까지, 음수라면 끝에서부터 셈
+
+EX)	let desc = "abcdefg";
+	desc.slice(2);	// "cdefg"
+	desc.slice(0,5);	// "abcde"
+	desc.slice(2,-2);	// "cde"
+
+
+4) srt.substring(n, m)
+- n과 m 사이 문자열 반환
+- n과 m 을 바꿔도 동작
+- 음수는 0으로 인식
+
+EX)	let desc = "abcdefg";
+	desc.substring(2, 5);	// "cde"
+	desc.substring(5, 2);	// "cde"
+
+
+5) str.substr(n, m)
+- n부터 m개를 가져옴
+
+EX)	let desc = "abcdefg";
+	desc.substr(2,4);		// "cdef"
+	desc.substr(-4, 2);	// "de"	// n이 음수면 뒤에서 부터 셈
+
+
+6) str.trim()
+- 앞 뒤 공백 제거
+
+ 
+7) str.repeat(n)
+- 문자열 n번 반복
+
+EX)	let hello = "hello!";
+	hello.repeat(3);		// "hello!hello!hello!"
+
+
+8) 문자열 비교
+
+"a" < "c" 	// true
+"A" < "a"	// true		// 알파벳은 대문자보다 소문자가 크다
+					// 아스키 코드 값으로 비교함
+
+
+
+

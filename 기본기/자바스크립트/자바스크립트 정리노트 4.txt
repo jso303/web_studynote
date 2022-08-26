@@ -1,0 +1,51 @@
+1. 배열 (array) : 순서가 있는 리스트
+
+※ 배열은 문자 뿐만 아니라 숫자, 객체, 함수 등도 포함할 수 있음
+
+EX)	let arr = [
+		'민수',					// 문자
+		3,						// 숫자
+		false,						// Boolean
+		{						
+			name : 'Mike',			// 객체
+			age : 30,
+		},
+		function() {				// 함수
+			console.log('TEST');
+		}
+	];
+
+
+1) length : 배열의 길이
+EX) students.length	// 	결과) students에 들어있는 요소의 갯수
+
+2) push() : 배열 끝에 추가
+EX) 	let days = ['월', '화', '수'];
+	days.push('목');
+	console.log(days)	// 결과) ['월', '화', '수', '목']
+
+3) pop() : 배열 끝 요소 제거
+EX) 	let days = ['월', '화', '수'];
+	days.pop();
+	console.log(days)	// 결과) ['월', '화']
+
+4) shift, unshift : 배열 앞에서 제거/추가
+EX) 
+
+추가)	let days1 = ['월', '화', '수'];
+	days.unshift('일');
+	console.log(days1)	// 결과) ['일', '월', '화', '수']
+
+제거)	let days2 = ['월', '화', '수'];
+	days.shift();
+	console.log(days2)	// 결과) ['화', '수']
+
+
+※ 	배열에서는 반복문 for ... in 보다는 for ... of를 사용하는 것이 좋다.
+	대신 for ... of를 사용하면 인덱스 값은 사용할 수 없다.
+
+
+
+
+
+
