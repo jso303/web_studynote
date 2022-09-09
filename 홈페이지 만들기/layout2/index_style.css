@@ -1,0 +1,52 @@
+body {
+   background: skyblue;
+   font-size: 25px;
+}
+
+#wrap {
+    width: 1000px;
+    height: 800px;
+    text-align: center;
+}
+
+#HEADER {
+    width: 1000px;
+    height: 100px;
+    background: rgb(104, 174, 202);
+}
+
+#NAV {
+    width: 1000px;
+    height: 100px;
+    background: rgb(66, 142, 172);
+}
+
+#SIDE_LEFT {
+    float: left;
+    width: 300px;
+    height: 500px;
+    background: rgb(32, 118, 151);
+}
+
+#CONTENTS {
+    float: left;
+    width: 400px;
+    height: 500px;
+    background: rgb(26, 108, 141);
+}
+
+#SIDE_RIGHT {
+    float: left;
+    width: 300px;
+    height: 500px;
+    background: rgb(12, 115, 156);
+}
+
+#FOOTER {
+    clear: both;
+    width: 1000px;
+    height: 100px;
+    background: rgb(14, 155, 211);
+}
+
+

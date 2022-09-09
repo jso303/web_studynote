@@ -1,0 +1,44 @@
+body {
+   background: skyblue;
+   font-size: 25px;
+}
+
+#wrap {
+    width: 1000px;
+    height: 800px;
+    text-align: center;
+}
+
+#side {
+    float: left;
+    width: 250px;
+    height: 800px;
+    background: rgb(2, 116, 161);
+    line-height: 800px;
+}
+
+#header {
+    float: left;
+    width: 750px;
+    height: 250px;
+    background: rgb(104, 174, 202);
+    line-height: 250px;
+}
+
+#contents {
+    float: left;
+    width: 750px;
+    height: 300px;
+    background: rgb(11, 95, 128);
+    line-height: 250px;
+}
+
+#footer {
+    float: left;
+    width: 750px;
+    height: 250px;
+    background: rgb(14, 155, 211);
+    line-height: 250px;
+}
+
+

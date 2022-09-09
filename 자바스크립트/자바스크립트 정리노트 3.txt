@@ -1,0 +1,147 @@
+1. 함수
+- 함수가 어디 있던지 실행 가능 (자바스크립트는 함수를 우선 처리하는 호이스팅을 거침)
+
+EX)	function sayHello(name){				// 	함수 함수명 (매개변수) {
+		console.log(`Hello, ${name}`);				함수 실행 코드
+	}									}
+
+
+※	함수로 만들어 놓으면 매개변수를 바꿔가며 다양하게 대응이 가능하고
+	유지보수가 쉬워진다.
+
+1) 전역변수 : 함수 외부에서 전체에 적용되는 변수
+
+2) 지역변수 : 함수 내부에서 함수 안에서만 적용되는 변수
+※ 이미 전역변수로 선언된 변수를 함수 안에서 사용하면 전역변수로서 작용
+※ 단, let을 사용하여 선언하면 동일 이름 변수도 개별 지역변수로서 사용 가능함.
+
+
+
+★ 한번에 한 작업에 집중
+★ 읽기 쉽고 어떤 동작인지 알 수 있게 네이밍 
+EX) 	showErro // 에러를 보여줌
+	getName // 이름을 얻어옴
+	createUserData // 유저데이터 생성
+
+
+
+2. 화살표 함수
+
+- 함수 표현식에서 사용 가능 (변수에 함수 선언하는 방식)
+
+EX)	let add =function(num1, num2){
+		return num1 + num2;
+	}
+
+화살표 함수)
+	let add = (num1, num2) => {	// function 생략하고 => 사용
+		return num1+num2;
+	}
+
+	let add = (num1, num2) => (	// function 생략하고 => 사용
+		num1+num2;			// return문은 ()로 표현 가능
+	)
+	
+
+	let add = (num1, num2) => num1+num2;		// 내용이 return문 한줄이라면 ()도 생략가능
+
+	let sayHello = name => `Hello, ${name}`;		// 인수가 하나라면 () 생략 가능
+
+	
+
+3. Object (객체)
+
+EX)	const superman = {		// 객체명
+		name : 'clark',		// 키 : 값
+		age : 33,
+	}
+
+접근)	
+	superman.name			// 'clark'
+	superman['age']			// 33
+
+추가)
+	superman.gender = 'male';
+	superman['hairColor'] = 'black';
+
+삭제)
+	delete superman.hairColor;
+
+
+1) 단축 프로퍼티
+
+EX)	const name = 'clark'
+	const age = 33;
+
+	const superman = {
+		name,			// name : name 와 동일
+		age,				// age : age 와 동일
+		gender : 'male',
+	}
+
+2) 프로퍼티 존재 여부 확인
+
+EX)	superman.birthDay;		// undefined
+	'birthDay' in superman;	// false
+	'age' in superman;		// true
+
+
+3) for ... in 반복문
+
+EX) 	for(let x in superman) {			// 객체를 순회하면서 반복함
+		console.log(x)				// 결과)  key 값들 반환 
+		console.log(superman[x])		// 결과) value 값들 반환
+	}
+
+
+4) 함수를 받아 객체 생성하기
+
+EX)	function makeObject(name, age){
+		return {
+			name, 	//name : name
+			age,		//age : age
+			hobby : 'football'
+		};
+	}
+
+	const Mike = makeObject("Mike", 30);
+	console.log(Mike);
+
+결과)	Object {
+		age : 30,
+		hobby : "football",
+		name : "Mike"			// 출력 순서는 입력순이 아닌 알파벳순
+	}
+
+
+
+4. method : 객체 프로퍼티로 할당 된 함수
+
+EX) 	const superman = {
+		name : 'clark',
+		age : 33,
+		fly : function() {					// fly() 로 줄여서 사용 가능	
+			console.log('날아갑니다.')		// fly()가 method이다.
+		}
+	}
+
+
+
+5. this
+
+- 메서드 호출 시 메서드 내부에서 사용된 this는 해당 객체로 바인딩된다.
+
+EX)	const user = {
+		name : 'Mike',
+		sayHello : function() {
+			console.log(`Hello, I'm ${this.name}`);	
+		}
+		
+	user.sayHello();		// 결과) Hello, I'm Mike
+
+	// this가 해당 객체인 user과 동일하기 때문에 user.name와 같은 역할을 한다.
+	// 하지면 user.name로 사용하면 오류가 날 수 있기 때문에 this를 사용함
+
+
+※ 화살표 함수는 일반 함수와 달리 자신만의 this를 가지지 않으므로 외부에서 값을 가져옴
+

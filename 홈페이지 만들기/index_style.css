@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    background: greenyellow;
+}
+
+#wrap {
+    display: flex;
+    flex-direction: column;
+    background: skyblue;
+}
+
+#wrap #item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+header {
+    height: 200px;
+    background: green;
+}
+
+nav {
+    height: 200px;
+    background: rgb(5, 151, 5);
+}
+
+#horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    height: 200px;
+    width: 50%;
+    background: rgb(18, 184, 18);
+}
+
+section {
+    height: 200px;
+    width: 50%;
+    background: rgb(38, 230, 63);
+}
+
+footer {
+    clear: both;
+    height: 200px;
+    background: rgb(28, 155, 28);
+}

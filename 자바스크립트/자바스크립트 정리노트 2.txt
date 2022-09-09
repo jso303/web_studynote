@@ -1,0 +1,107 @@
+1. 형변환 (명시적 형변환)
+
+- String() : 문자형으로 변환
+- Number() : 숫자형으로 변환 (true와 false는 각각 0과 1로 변환됨, null은 0, undefined 는 NaN으로 변환됨)
+- Boolean() : 불린형으로 변환 (숫자 0, 빈 문자열, null, undefined, NaN 은 모두 false로 반환, 나머지는 true)
+
+EX) 	prompt로 입력 받은 값은 문자형으로 입력된다.
+	예를 들어 숫자 계산을 진행할 때 오류를 발생시키므로 명시적 형변환을 거치는 것이 좋다.
+
+
+
+2. 기본 연산자
+- % (나머지) : 		(홀수) X % 2 =1		(짝수) Y % 2 = 0	(특정 숫자 이하 반환) X % 5 = 0~4 만 반환됨
+- ** (거듭제곱) : 	2**3 = 8
+
+- 증가, 감소 연산자
+EX) 	let num = 10;
+	let result = num++;
+	
+	console.log(result);		결과) 10	(값이 증가하기 전의 값을 result에 넣고 증가시킴)
+	
+	let num2 = 10;
+	let result2 = ++num2;
+
+	console.log(result2);		결과) 11	(값이 먼저 증가하고 result에 넣음)
+
+
+
+3. 논리 연산자
+- || (OR, 이거나) : 여러개 중 하나라도 true, 모든 값이 false이면 false
+
+- && (AND, 이고) : 모든 값이 true면 true, 하나라도 false면 false
+★ && 가 || 보다 우선순위가 높기 때문에 먼저 처리됨
+
+- ! (NOT, 반대) : ture면 false, false면 true
+
+
+
+4. 반복문
+
+1) for 문
+
+EX)	for (let i=0; i<10; i++){		// for(초기값; 조건; 코드 실행 후 작업;)	
+		console.log(i);
+	}
+	★	10번 반복하는 코드이다.
+		0부터 9까지 콘솔에 출력됨
+
+	
+2) while 문
+
+EX)	let i =0;
+	
+	while (i<10) {				// while(조건)
+ 		console.log(i);
+		i++;
+	}
+	
+	★	조건에 부합하는 동안 반복함.
+		10번 반복하는 코드이다.
+		0부터 9까지 콘솔에 출력됨.
+	
+	
+
+3) do while 문
+
+EX)	let i = 0;
+	
+	do {
+		i++;
+	} while(i<10)
+
+	★ while 과 유사하나 일단 1회 실행하고 조건 검사를 진행하여 반복한다.
+
+
+4) break : 멈추고 반복문을 빠져나옴
+
+
+5) continue : 멈추고 다음 반복으로 진행
+EX)	for (let i =0; i<10; i++){			// i가 0에서 10 미만까지 1씩 증가
+		if(i%2){					// 만약 i가 2로 나누었을 때 true면 (홀수면 1이 되어 true)
+			continue;				// 다음 반복으로 진행 (i++)
+		}		
+		console.log(i)				// continue를 만나지 않은 짝수일 때만 출력
+	}
+
+	결과) 	0
+			2
+			4
+			6
+			8 이 출력됨
+
+
+6) switch 문
+- 케이스가 다양할 경우 if나 while보다 간결하게 사용가능
+
+EX)	switch(평가){
+		case A :
+			// A일때 코드
+			break;
+		case B :
+			// B일때 코드
+			break;
+		...
+		defalut :
+			// 입력되는 값이 case에 속한게 없을 경우 코드
+	}

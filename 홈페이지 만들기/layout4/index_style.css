@@ -1,0 +1,59 @@
+body {
+   background: skyblue;
+   font-size: 25px;
+}
+
+#wrap {
+    width: 1000px;
+    height: 800px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#header {
+    width: 1000px;
+    height: 100px;
+    background: rgb(104, 174, 202);
+    line-height: 100px;
+}
+
+#nav {
+    width: 1000px;
+    height: 100px;
+    background: rgb(66, 142, 172);
+    line-height: 100px;
+}
+
+#side {
+    float: left;
+    width: 300px;
+    height: 500px;
+    background: rgb(32, 118, 151);
+    line-height: 500px;
+}
+
+#content1 {
+    float: left;
+    width: 700px;
+    height: 250px;
+    background: rgb(26, 108, 141);
+    line-height: 250px;
+}
+
+#content2 {
+    float: left;
+    width: 700px;
+    height: 250px;
+    background: rgb(12, 115, 156);
+    line-height: 250px;
+}
+
+#footer {
+    clear: both;
+    width: 1000px;
+    height: 100px;
+    background: rgb(14, 155, 211);
+    line-height: 100px;
+}
+
+
