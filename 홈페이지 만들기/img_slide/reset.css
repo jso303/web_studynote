@@ -38,10 +38,7 @@ h1,h2,h3,h4,h5,h6 {
 /* border reset */
 img, fieldset {
     border: 0 none;
-}
-/* button reset */
-button {
-    border: 0;
+
 }
 
 /* IR Effect */

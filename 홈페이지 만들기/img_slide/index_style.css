@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* banner */
+#cont_ban {
+    /* 전체 컨테이너 */
+    width: 500px;
+    height: 140px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slides {    
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1800px;
+    transition: 0.5s ease-out;
+}
+/* 첫번째 슬라이드 가운데 정렬 */
+.slides li:first-child {
+    margin-left: 110px;
+} 
+/* 슬라이드들 옆으로 정렬 */
+.slides li:not(:last-child) {
+    float: left;
+    margin-right: 110px;
+}
+.slides li {
+    float: left;
+}
+
+/* move_btn */
+.controller a.prev {
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    width: 43px;
+    height: 43px;
+    background: url(../img/icon.png) no-repeat -150px 0;
+}
+.controller a.prev:hover {
+    background-position: -193px 0;
+}
+.controller a.next {
+    position: absolute;
+    right: 40px;
+    top: 60px;
+    width: 43px;
+    height: 43px;
+    background: url(../img/icon.png) no-repeat -150px -43px;
+}
+.controller a.next:hover {
+    background-position: -193px -43px;
+}
+
+/* img_hover_effect */
+.ban ul li img {
+    border: 4px solid #dcdcdc;
+}
+.ban ul li img:hover {
+    border-color: #98bcdc;
+}
